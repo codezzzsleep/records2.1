@@ -17,8 +17,8 @@ int main() {
 	sort(c, c + n);
 	long long res = 0;
 	for (int i = 0; i < n; i++) {
-		int x = lower_bound(a, a + n, b[i]) - a;
-		int y = upper_bound(c, c + n, b[i]) - c;
+		long long  x = lower_bound(a, a + n, b[i]) - a;
+		long long  y = n - (upper_bound(c, c + n, b[i]) - c);
 		res += x * y;
 	}
 	cout << res << endl;
